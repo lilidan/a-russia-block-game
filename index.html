@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Russia Block Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>Russia Block Game</h1>
+            <div class="game-info">
+                <div class="score-panel">
+                    <div>Score: <span id="score">0</span></div>
+                    <div>Level: <span id="level">1</span></div>
+                    <div>Lines: <span id="lines">0</span></div>
+                </div>
+                <div class="next-panel">
+                    <h3>Next:</h3>
+                    <canvas id="next-canvas" width="80" height="80"></canvas>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-board">
+            <canvas id="game-canvas" width="300" height="600"></canvas>
+        </div>
+        
+        <div class="game-controls">
+            <div class="control-instructions">
+                <h3>Controls:</h3>
+                <p>← → : Move</p>
+                <p>↓ : Soft Drop</p>
+                <p>↑ : Rotate</p>
+                <p>Space : Hard Drop</p>
+                <p>P : Pause</p>
+            </div>
+            <button id="start-btn">Start Game</button>
+            <button id="pause-btn" disabled>Pause</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+        
+        <div id="game-over" class="game-over hidden">
+            <h2>Game Over!</h2>
+            <p>Final Score: <span id="final-score">0</span></p>
+            <button id="restart-btn">Play Again</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
